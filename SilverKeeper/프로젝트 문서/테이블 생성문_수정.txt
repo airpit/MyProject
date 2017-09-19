@@ -1,0 +1,102 @@
+
+*한번에 테이블 생성하는법:
+cmd 창에서
+c:\(oraclexe설치폴더)로 이동.
+ex) c:\oraclexe
+그 이후, 명령문으로 sqlplus 입력하고, oracle 사용자명과 비밀번호를 입력하면 sql문을 입력가능함. 그때, 위에 쓰여진 sql문을 통째로 복사해서 붙여넣으면 원터치 생성이 가능!
+
+CREATE TABLE silverID(silverID VARCHAR2(20) PRIMARY KEY);
+
+CREATE TABLE silverData(silverID  VARCHAR2(20) NOT NULL,
+walkCount NUMBER(10) NOT NULL,
+heartRate NUMBER(10) NOT NULL,
+currentTime VARCHAR2(20),
+connMiBand NUMBER(2) NOT NULL,
+CONSTRAINTS silverData_silverID_fk FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE silverIdentifyNumber(silverID VARCHAR2(20),
+identifyNumber NUMBER(10),
+CONSTRAINTS silverIdentifyNumber_silverID_fk FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE keeperID(keeperID VARCHAR2(20) PRIMARY KEY,
+silverID VARCHAR(20) NOT NULL,
+CONSTRAINTS keeperID_silverID_fk FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE keeperData(keeperID VARCHAR2(20),
+keeperToken VARCHAR2(20) NOT NULL,
+CONSTRAINTS keeperData_keeperID_fk FOREIGN KEY(keeperID) REFERENCES keeperID(keeperID));
+
+CREATE TABLE silverHeartRate(maxHeartRate NUMBER(10), 
+minHeartRate NUMBER(10), 
+currentTime VARCHAR2(20),
+silverID VARCHAR(20) NOT NULL,
+CONSTRAINTS fk_heartRate FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE silverAddress(silverID  VARCHAR2(20),
+silverToken VARCHAR2(20) NOT NULL,
+rassberryPiURL VARCHAR2(50) NOT NULL,
+wifiSSID VARCHAR2(20) NOT NULL,
+CONSTRAINTS fk_address FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE silverHomeComingStatus(silverID  VARCHAR2(20),
+homeComing NUMBER(2) NOT NULL,
+CONSTRAINTS fk_hc_status FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE silverMiBandConn(silverID  VARCHAR2(20),
+BLEStatus NUMBER(2) NOT NULL,
+CONSTRAINTS fk_miband_conn FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+CREATE TABLE silverEmergencyStatus(silverID  VARCHAR2(20),
+emergencyRate NUMBER(3) NOT NULL,
+CONSTRAINTS fk_emergency_status FOREIGN KEY(silverID) REFERENCES silverID(silverID));
+
+**테스트용 데이터 삽입
+
+INSERT INTO SilverID
+VALUES ('SV005');
+INSERT INTO SilverID
+VALUES ('SV006');
+INSERT INTO SilverID
+VALUES ('SV007');
+INSERT INTO KeeperID
+VALUES ('KP005','SV005');
+INSERT INTO KeeperID
+VALUES ('KP006','SV005');
+
+INSERT INTO SilverData
+VALUES ('SV005',5,60,SYSDATE,0);
+
+INSERT INTO SilverIdentifyNumber
+VALUES ('SV005',15324);
+
+INSERT INTO KeeperData
+VALUES ('KP005','TOKENTEST');
+
+INSERT INTO SilverAddress
+VALUES ('SV005','SVTOKEN','www.naver.com','WIFISSIDTESTING');
+
+INSERT INTO silverHomeComingStatus
+VALUES ('SV005',1);
+
+INSERT INTO silverMiBandConn
+VALUES ('SV005',0);
+
+INSERT INTO silverHeartRate
+VALUES (120,50,SYSDATE,'SV005');
+
+INSERT INTO silverEmergencyStatus
+VALUES ('SV005',3);
+
+
+테이블 삭제시
+
+drop table silverData;
+drop table keeperData;
+drop table keeperID;
+drop table silverID;
+drop table silverHeartRate;
+drop table silverIdentifyNumber;
+drop table silverAddress;
+drop table silverHomeComingStatus;
+drop table silverMiBandConn;
+drop table silverEmergencyStatus;
