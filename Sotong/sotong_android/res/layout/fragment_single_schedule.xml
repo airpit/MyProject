@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <Button
+            android:id="@+id/monthPrevious"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/backward"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/addSingleScheduleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/write_btn2" />
+
+        <TextView
+            android:id="@+id/monthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/addSingleScheduleBtn"
+            android:layout_toRightOf="@+id/monthNext"
+            android:background="#9DE6D9"
+            android:gravity="center_horizontal"
+            android:text="MonthView"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/monthNext"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/monthPrevious"
+            android:background="@drawable/forward"
+            android:gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+    <com.example.finalproject.calendar.CalendarView
+        android:id="@+id/monthView"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_weight="0.51" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="0.70" >
+    </ListView>
+
+</LinearLayout>

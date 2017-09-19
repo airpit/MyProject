@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="../../css/famSchedule/editFamSchedule.css">
+	<script src="../../js/famSchedule/editFamSchedule.js" type="text/javascript" charset="utf-8"></script>
+ 
+</head>
+<body>
+  <input type="button" id="editFamScheBtn" alt="가족일정 수정하기" />
+
+  <!-- 일정추가 Modal -->
+  <div class="modal fade" id="ourEditSche" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- 일정추가 Modal 내용 -->
+     <div class="modal-content">
+     	<!-- 일정추가 최상단부 -->
+        <div class="modal-header" > 
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>
+          	<span class="glyphicon glyphicon-lock"></span>
+          	<label id="menuName">가족 일정 상세보기</label>
+          </h4>
+        </div>
+        <div class="modal-body" >
+          <form class = "form-horizontal" role="form">
+          
+          <!-- 제목 -->
+          
+            <div class="form-group">
+                <label for="txtTel" class="col-sm-2 control-label">제목</label>
+            <div class="col-sm-10">
+           		<input type="text" class="form-control" id="scheduleTitle" placeholder="일정의 제목을 입력하세요." readonly>
+        	</div>
+        	</div>
+        	
+          <!-- 장소 -->
+                      
+            <div class="form-group">
+              	<label for="txtTel" class="col-sm-2 control-label">장소</label>
+              <div class="col-sm-10">
+              	<input type="text" class="form-control" id="schedulePlace" placeholder="일정의 장소를 입력하세요." readonly>
+              </div>
+            </div>
+            
+           <!-- 일시 -->
+           
+           <div class="form-group">
+              <label for="txtTel" class="col-sm-2 control-label">시작일시</label>
+              <div class="col-sm-5">
+              	<input type="date" class="form-control" id="startDate" readonly>
+              </div>
+              
+              <div class="col-sm-4">
+              	<input type="time" class="form-control" id="startTime" readonly>
+              </div>
+           </div>
+           
+           <div class="form-group">
+              <label for="txtTel" class="col-sm-2 control-label">종료일시</label>             
+              <div class="col-sm-5">
+              	<input type="date" class="form-control" id="endDate" readonly>
+              </div>
+              
+              <div class="col-sm-4">
+              	<input type="time" class="form-control" id="endTime" readonly>
+              </div>
+           </div>
+            
+            
+            <!-- 하루종일 버튼. -->
+            <div class="form-group">
+            	<div id="allDayDiv" >
+            		<input type="checkbox" name="allDayBtn" id="allDayBtn" readonly>하루종일
+            	</div>
+            </div>
+            
+            
+            <!-- 반복 -->
+                   	
+            <div class="form-group">
+            	<label for="txtTel" class="col-sm-2 control-label">반복</label>
+            	<div class="col-sm-10">
+            		<select class="col-sm-4" id="repeatSelec">
+            			<option>일회성 일정</option>
+            			<option>매주</option>
+            			<option>매월</option>
+					</select>
+					<script language="javascript">
+						document.all["repeatSelec"].disabled=true;
+					</script>
+					
+					<label for="txtTel" class="col-sm-2 control-label">알림</label>
+					<select class="col-sm-4" id="alarmSelec">
+            			<option>없     음</option>	
+            			<option>15 분전</option>
+            			<option>30 분전</option>
+            			<option>1시간 전</option>
+            			<option>2시간 전</option>
+					</select>
+					<script language="javascript">
+						document.all["alarmSelec"].disabled=true;
+					</script>
+            	</div>
+            </div>	
+            
+            
+            <!-- 이벤트  -->
+            <div class="form-group">
+            	<label for="txtTel" class="col-sm-3">이벤트 등록 여부</label>
+           			<input type="checkbox" name="eventSelec" class="col-sm-1" id="eventSelecBtn" readonly>
+           			<label for="txtTel" id="famSelec">응답 요청 가족</label>
+            </div>
+            
+            <div class="form-group" id="eventDiv">
+            	<label for="txtTel" class="col-sm-2 control-label">질문</label>
+            	<div class="col-sm-10">
+            		<div  class="col-sm-7">
+            			<input class="form-control" type="text" id="eventQ" placeholder="질문을 입력하세요" readonly>
+            		</div>
+            		<div class="col-sm-2" id="famCheckBox">
+            			아빠♡<input type="checkbox" checked="checked" class="famCheck"><br>
+            			엄마♡<input type="checkbox" checked="checked" class="famCheck"><br>
+            			동생♡<input type="checkbox" checked="checked" class="famCheck"><br>
+            		</div>
+            	</div>
+     	
+            </div>
+            	
+            <!-- 메모 -->
+            
+            <div class="form-group">
+              	<label for="txtTel" class="col-sm-2 control-label">메모</label>
+              <div class="col-sm-10">
+              	<input type="text" class="form-control" id="userEmail" placeholder="메모 입력하세요" readonly>
+              </div>
+            </div>
+              	<div class="btnDiv">          
+              		<input type="button" class="editScheBtn" id="modifyBtn" alt="수정"/> 
+              		<input type="button" class="editScheBtn" id="deleteBtn" alt="삭제"/>	
+              		<input type="button" class="editScheBtn" id="backBtn" alt="돌아가기"/>
+              		<input type="button" class="addScheBtn" id="okBtn" alt="등록"/>
+              		<input type="button" class="addScheBtn" id="cancelBtn" alt="취소"/>
+          		</div>
+          </form>
+        </div>
+      </div> 
+    </div>
+  </div> 
+  
+
+</body>
+
+</html>

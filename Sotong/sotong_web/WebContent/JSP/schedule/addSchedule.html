@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="../../css/schedule/addSchedule.css">
+	<script src="../../js/schedule/addSchedule.js" type="text/javascript" charset="utf-8"></script>
+ 
+</head>
+<body>
+  <input type="button" id="addScheBtn" alt="일정추가하기" />
+
+  <!-- 일정추가 Modal -->
+  <div class="modal fade" id="myAddSche" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- 일정추가 Modal 내용 -->
+     <div class="modal-content">
+     	<!-- 일정추가 최상단부 -->
+        <div class="modal-header" > 
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>일정 추가</h4>
+        </div>
+        <div class="modal-body" >
+          <form class = "form-horizontal" role="form">
+          
+          <!-- 제목 -->
+          
+            <div class="form-group">
+                <label for="txtTel" class="col-sm-2 control-label">제목</label>
+            <div class="col-sm-10">
+           		<input type="text" class="form-control" id="scheduleTitle" placeholder="일정의 제목을 입력하세요.">
+        	</div>
+        	</div>
+        	
+          <!-- 장소 -->
+                      
+            <div class="form-group">
+              	<label for="txtTel" class="col-sm-2 control-label">장소</label>
+              <div class="col-sm-10">
+              	<input type="text" class="form-control" id="schedulePlace" placeholder="일정의 장소를 입력하세요.">
+              </div>
+            </div>
+            
+           <!-- 일시 -->
+           
+           <div class="form-group">
+              <label for="txtTel" class="col-sm-2 control-label">시작일시</label>
+              <div class="col-sm-5">
+              	<input type="date" class="form-control" id="startDate">
+              </div>
+              
+              <div class="col-sm-4">
+              	<input type="time" class="form-control" id="startTime">
+              </div>
+           </div>
+           
+           <div class="form-group">
+              <label for="txtTel" class="col-sm-2 control-label">종료일시</label>             
+              <div class="col-sm-5">
+              	<input type="date" class="form-control" id="endDate">
+              </div>
+              
+              <div class="col-sm-4">
+              	<input type="time" class="form-control" id="endTime">
+              </div>
+           </div>
+            
+            
+            <!-- 하루종일 버튼. -->
+            <div class="form-group">
+            	<div id="allDayDiv" >
+            		<input type="checkbox" name="allDayBtn" id="allDayBtn">하루종일
+            	</div>
+            </div>
+            
+            
+            <!-- 반복 -->
+                   	
+            <div class="form-group">
+            	<label for="txtTel" class="col-sm-2 control-label">반복</label>
+            	<div class="col-sm-10">
+            		<select class="col-sm-4">
+            			<option>일회성 일정</option>
+            			<option>매주</option>
+            			<option>매월</option>
+					</select>
+					
+					<label class ="col-sm-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;알림 가족 설정</label>
+					<select id="familyArlam">
+						<option>엄마♡</option>
+						<option>아빠♡</option>
+						<option>동생♡</option>
+					</select>
+            	</div>
+            </div>	
+            	
+           	<!-- 알림 -->
+            	
+            <div class="form-group">
+            	<label for="txtTel" class="col-sm-2 control-label">반복</label>
+            	<div class="col-sm-10">
+            		<select class="col-sm-4">
+            			<option>없     음</option>
+            			<option>15 분전</option>
+            			<option>30 분전</option>
+            			<option>1시간 전</option>
+            			<option>2시간 전</option>
+					</select>
+					
+					<label class ="col-sm-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엄마♡, 아빠♡</label>
+					
+            	</div>
+            </div>	
+            	
+            <!-- 메모 -->
+            
+            <div class="form-group">
+              	<label for="txtTel" class="col-sm-2 control-label">메모</label>
+              <div class="col-sm-10">
+              	<input type="text" class="form-control" id="userEmail" placeholder="메모 입력하세요">
+              </div>
+            </div>
+              	<div class="btnDiv">          
+              		<input type="button" class="addScheBtn" id="okBtn" alt="등록"/><!--  src="img/schedule/ok.png"  -->
+              		<input type="button" class="addScheBtn" id="cancelBtn" alt="취소"/> <!-- src="img/schedule/cancel.png"  -->
+          		</div>
+          </form>
+        </div>
+      </div> 
+    </div>
+  </div> 
+  
+
+</body>
+
+</html>

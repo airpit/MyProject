@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.finalproject"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+    android:orientation="vertical" >
+	
+	<LinearLayout android:layout_width="fill_parent"
+		android:gravity="center_horizontal" android:id="@+id/header_layout_schedule2"
+		android:orientation="vertical" android:layout_height="wrap_content">
+		<!-- 장쟁 추가 -->
+		
+		<org.taptwo.android.widget.TitleFlowIndicator
+			android:id="@+id/viewflowindic_single_schedule" android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:background="#2DA5C0"
+			app:footerLineHeight="2dp"
+			app:customTypeface="fonts/Antic.ttf"
+			app:footerTriangleHeight="10dp" 
+			app:textColor="#FFFFFF" 
+			app:selectedColor="#FFFFFF" 
+			app:footerColor="#C5B49F" 
+			app:titlePadding="10dp" 
+			app:textSize="12dp" 
+			app:selectedSize="11dp"  
+			android:layout_marginTop="10dip" 
+			app:clipPadding="5dp">
+		 	
+		</org.taptwo.android.widget.TitleFlowIndicator>
+        <!-- selectedSize가 가운데 사이즈고 양쪽 사이즈가 testSize   002148 -->
+	</LinearLayout>
+	<org.taptwo.android.widget.ViewFlow
+		android:duplicateParentState="true" android:id="@+id/viewflow_single_schedule"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		>
+	    
+	</org.taptwo.android.widget.ViewFlow>
+    
+ 
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <Button
+            android:id="@+id/monthPrevious1"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/backward"
+            android:gravity="center_horizontal" />
+        
+
+        <TextView
+            android:id="@+id/monthText1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="MonthView"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/monthNext1"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/forward"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+
+    <com.example.finalproject.calendar.CalendarView
+        android:id="@+id/monthView1"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_weight="0.51" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="0.70" >
+         
+       
+    </ListView>
+
+</LinearLayout>
