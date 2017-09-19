@@ -1,0 +1,331 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+  	android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_margin="1dp"
+        >
+
+        <TextView
+            
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+           android:background="#00B0F0"
+           android:textColor="#FFFFFF"
+            android:layout_weight="3"
+            
+            android:text="가족일정 등록" />
+
+        <Button
+            android:id="@+id/famSave"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00B0F0"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="저장" />
+
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+	        android:textColor="#000000"
+            android:text="제목 및 장소" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:layout_margin="10sp"
+            android:orientation="vertical" 
+            android:background="#FEFBF0">
+            	<EditText 
+            	    android:id="@+id/famAddTitle"
+            	    android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="3dp"
+            	     android:layout_marginBottom="5dp"
+            		android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:background="@drawable/border"
+            		android:textSize="15sp"
+            		android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+           			android:hint="일정 제목" 
+           			
+            	    />
+            	<EditText 
+            	    android:id="@+id/famAddPlace"
+            	 	android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="5dp"
+            	     android:layout_marginBottom="3dp"
+            	 	android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:background="@drawable/border"
+            		android:textSize="15sp"
+            		android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+           			android:hint="일정 장소" 
+            	    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+             android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginBottom="1dp"
+	            android:textSize="18sp"
+	            android:textStyle="bold"
+	            android:textColor="#000000"
+                android:text="하루 종일" />
+
+            <CheckBox
+                android:id="@+id/famAddCheck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+             android:layout_marginBottom="5sp"
+              android:layout_marginLeft="10sp"
+             android:layout_marginRight="10sp"
+            android:background="#FEFBF0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="3dp"
+            	     android:layout_marginBottom="5dp"
+            	     android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+            	     android:background="@drawable/border"
+                android:orientation="horizontal" >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="시작" />
+
+                <TextView
+                    android:id="@+id/famAddStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="시작 날짜" />
+                <TextView
+                    android:id="@+id/famAddStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="시작 시간" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="5dp"
+            	     android:layout_marginBottom="3dp"
+            	     android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+            	     android:background="@drawable/border"
+                android:orientation="horizontal" >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    
+                    android:text="종료" />
+
+                <TextView
+                    android:id="@+id/famAddEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="종료 날짜" />
+                <TextView
+                    android:id="@+id/famAddEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="종료 시간" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+            android:background="#FEFBF0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:paddingTop="1dp"
+            		android:paddingBottom="1dp"
+            		android:paddingLeft="10dp"
+            android:background="@drawable/border">
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="나의 알림" />
+
+            <TextView
+                android:id="@+id/famAddAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="알림시간" />
+
+            <CheckBox
+                android:id="@+id/famAddCheck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            >
+
+            <TextView
+               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="반복 여부" />
+
+            <TextView
+                android:id="@+id/famAddLoop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="반복 시간" />
+
+            <CheckBox
+                android:id="@+id/famAddCheck3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_margin="10sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_2"
+       >
+
+        <EditText
+            android:id="@+id/famAddContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="메모 내용" 
+            android:scrollbars="vertical"
+            android:maxLines="3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_margin="10sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_2">
+
+        <TextView
+            android:id="@+id/famAddEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="이벤트 등록" />
+
+        <CheckBox
+            android:id="@+id/famAddCheck4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+    </LinearLayout>
+
+</LinearLayout>

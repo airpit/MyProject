@@ -1,0 +1,324 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+  	android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_margin="1dp"
+        >
+
+        <TextView
+            
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+           android:background="#00B0F0"
+           android:textColor="#FFFFFF"
+            android:layout_weight="3"
+            
+            android:text="가족일정" />
+
+        <Button
+            android:id="@+id/famEdit"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00B0F0"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="수정" />
+
+        <Button
+            android:id="@+id/famDelete"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:background="#00B0F0"
+            android:text="삭제" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+	        android:textColor="#000000"
+            android:text="제목 및 장소" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:layout_margin="10sp"
+            android:orientation="vertical" 
+            android:background="#FEFBF0">
+            	<TextView 
+            	    android:id="@+id/famText1"
+            	    android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="3dp"
+            	     android:layout_marginBottom="5dp"
+            		android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:background="@drawable/border"
+            		android:textSize="15sp"
+            		android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+           			
+           			
+            	    />
+            	<TextView 
+            	    android:id="@+id/famText2"
+            	 	android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="5dp"
+            	     android:layout_marginBottom="3dp"
+            	 	android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:background="@drawable/border"
+            		android:textSize="15sp"
+            		android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+           			
+            	    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+             android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginBottom="1dp"
+	            android:textSize="18sp"
+	            android:textStyle="bold"
+	            android:textColor="#000000"
+                android:text="하루 종일" />
+
+            <CheckBox
+                android:id="@+id/famCheck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+             android:layout_marginBottom="5sp"
+              android:layout_marginLeft="10sp"
+             android:layout_marginRight="10sp"
+            android:background="#FEFBF0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="3dp"
+            	     android:layout_marginBottom="5dp"
+            	     android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+            	     android:background="@drawable/border"
+                android:orientation="horizontal" >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="시작" />
+
+                <TextView
+                    android:id="@+id/famText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="5dp"
+            	     android:layout_marginBottom="3dp"
+            	     android:paddingTop="5dp"
+            		android:paddingBottom="5dp"
+            		android:paddingLeft="10dp"
+            	     android:background="@drawable/border"
+                android:orientation="horizontal" >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    
+                    android:text="종료" />
+
+                <TextView
+                    android:id="@+id/famText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+            android:background="#FEFBF0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:paddingTop="1dp"
+            		android:paddingBottom="1dp"
+            		android:paddingLeft="10dp"
+            android:background="@drawable/border">
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="나의 알림" />
+
+            <TextView
+                android:id="@+id/famText5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                 />
+
+            <CheckBox
+                android:id="@+id/famCheck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/border"
+            >
+
+            <TextView
+               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="반복 여부" />
+
+            <TextView
+                android:id="@+id/famText6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                />
+
+            <CheckBox
+                android:id="@+id/famCheck3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_margin="10sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_2">
+
+        <TextView
+            android:id="@+id/famText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_margin="10sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_2">
+
+        <TextView
+            android:id="@+id/famText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             />
+
+        <CheckBox
+            android:id="@+id/famCheck4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+    </LinearLayout>
+
+</LinearLayout>
