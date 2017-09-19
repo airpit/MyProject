@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:baselineAligned="false">
+    <!--데이터 보기(실버 화면)-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="ok"
+                android:text="인증번호 확인"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:background="#3F51B5"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/syncBtnSilver"
+                android:layout_width="64dp"
+                android:layout_height="62dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/refresh" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/statusImage"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:srcCompat="@drawable/gray" />
+
+    <TextView
+        android:id="@+id/heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        android:text="현재 심박수" />
+
+    <TextView
+        android:id="@+id/heartRate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:text="71" />
+
+    <TextView
+        android:id="@+id/walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        android:text="오늘하루 걸음수" />
+
+    <TextView
+        android:id="@+id/walkCount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:text="10000" />
+
+    <Button
+        android:id="@+id/sosBtnSilver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="cancel"
+        android:text="SOS요청"
+        android:background="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/testIdNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</LinearLayout>

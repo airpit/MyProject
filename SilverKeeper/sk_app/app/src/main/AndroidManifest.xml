@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mac.sk_app">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Loading">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChoiceRole" />
+        <activity android:name=".ChoiceKeeper" />
+        <activity android:name=".ChoiceSilver" />
+        <activity android:name=".AgreeData" />
+        <activity android:name=".InputRasp" />
+        <activity android:name=".ErrorRasp" />
+        <activity android:name=".SuccessRasp" />
+        <activity android:name=".ViewData" />
+        <activity android:name=".CheckIdentity" />
+        <activity android:name=".InputKeeper" />
+        <activity android:name=".ErrorIdentity" />
+        <activity android:name=".ViewKdata" />
+        <activity android:name=".RejectKeeper" />
+        <activity android:name=".SuccessVerification" />
+        <activity android:name=".CheckJoinKeeper">
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //FCM
+        <service
+            android:name=".MyFireBaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFireBaseInstanceIDService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ViewStreamingActivity"
+            android:label="@string/title_activity_view_streaming"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
