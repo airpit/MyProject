@@ -1,6 +1,0 @@
-INDEX VERSION 1.127+/Users/mac/Documents/SilverKeeper/sk_tomcat/.metadata/.plugins/org.eclipse.jdt.core
-658611933.index
-2354651072.index
-1021433474.index
-2134745906.index
-4016894119.index
